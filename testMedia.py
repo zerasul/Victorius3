@@ -9,6 +9,7 @@ def test_add_nota():
 
 def test_add_Nota_Error_20():
     media = Media()
+    media.notas().clear()
     assert len(media.notas()) == 0
     with pytest.raises(ValueError):
         media.add(20)
